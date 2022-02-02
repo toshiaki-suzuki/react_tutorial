@@ -64,7 +64,7 @@ function Game() {
   });
   let status;
 
-  const handleClick = (i) => {
+  function handleClick(i) {
     const tempHistory = history.slice(0, stepNumber + 1);
     const tempCurrent = tempHistory[tempHistory.length - 1];
     const tempSquares = tempCurrent.squares.slice();
@@ -79,7 +79,7 @@ function Game() {
     setXIsNext(!xIsNext);
   }
 
-  const jumpTo = (step) => {
+  function jumpTo(step) {
     setStepNumber(step);
     setXIsNext((step % 2) === 0);
   }
