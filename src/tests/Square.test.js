@@ -18,20 +18,22 @@ afterEach(() => {
   container = null;
 });
 
-it("Squareを作成", () => {
-
-  const value = 'test';
-  const mockFunc = jest.fn();
-  const props = {
-    value,
-    onClick: mockFunc
-  }
-
-  render (Square(props), container);
-  const target = container.firstChild;
-  ReactTestUtils.Simulate.click(target);
-
-  expect(target.getAttribute('class')).toBe('square');
-  expect(target.textContent).toBe('test');
-  expect(mockFunc).toHaveBeenCalled();
-});
+describe('Square', () => {
+  it("Squareを作成", () => {
+  
+    const value = 'test';
+    const mockFunc = jest.fn();
+    const props = {
+      value,
+      onClick: mockFunc
+    }
+  
+    render (Square(props), container);
+    const target = container.firstChild;
+    ReactTestUtils.Simulate.click(target);
+  
+    expect(target.getAttribute('class')).toBe('square');
+    expect(target.textContent).toBe('test');
+    expect(mockFunc).toHaveBeenCalled();
+  });
+})
