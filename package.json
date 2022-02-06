@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,7 +41,9 @@
     "@babel/preset-env": "^7.16.11",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^27.5.0",
     "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.68.0",
